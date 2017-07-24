@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://unpkg.com/react@15/dist/react.js"></script>
+    <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+  </head>
+  <body>
+    <div>Greetings from Futon Closet</div>
+    <div id="root"></div>
+    <script type="text/babel">
+      console.log(<p>blah</p>)
+      class App extends React.Component {
+        render() {
+          return <p>A closet themed sleeping experience</p>;
+        }
+      }
+      ReactDOM.render(<App/>, document.getElementById("root"));
+    </script>
+  </body>
+</html>
