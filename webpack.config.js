@@ -5,6 +5,7 @@ const join = path.join
 
 // Webpack plugins
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 // Directories
 const root    = resolve(join(__dirname))
@@ -38,7 +39,11 @@ const config = {
   plugins: [
     new HtmlWebpackPlugin({
       template: join(htdocs, 'index.html')
-    })
+    }),
+    new CopyWebpackPlugin([{
+        from: resolve(root, "images"),
+        to: path.join(dest, "images")
+    }])
   ],
 }
 
