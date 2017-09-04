@@ -36,5 +36,8 @@
       "stage-0",
       "react"
     ]
+  },
+  "engines": {
+    "node": "8.2.1"
   }
 }
