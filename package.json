@@ -4,16 +4,32 @@
   "description": "The official website of Futon Closet.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "http-server"
+    "start": "npm run build",
+    "build": "webpack",
+    "dev": "webpack-dev-server --inline --hot"
   },
-  "keywords": [
-    "futon",
-    "closet"
-  ],
+  "keywords": ["futon", "closet"],
   "author": "Tasha Hankewych",
   "license": "ISC",
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  },
   "devDependencies": {
-    "http-server": "^0.10.0"
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "html-webpack-plugin": "^2.29.0",
+    "webpack": "^3.3.0",
+    "webpack-dev-server": "^2.6.1"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-0",
+      "react"
+    ]
   }
 }
